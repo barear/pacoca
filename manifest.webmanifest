@@ -1,0 +1,11 @@
+{
+  "name": "Paçoca — Parceiro Digital",
+  "short_name": "Paçoca",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#17120e",
+  "theme_color": "#20170f",
+  "lang": "pt-BR",
+  "description": "Protótipo do agente pessoal Paçoca",
+  "icons": []
+}

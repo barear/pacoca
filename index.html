@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#20170f">
+  <meta name="description" content="Paçoca — seu parceiro digital">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Paçoca</title>
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div class="avatar">🥜</div>
+      <div><h1>Paçoca</h1><p>Seu parceiro digital</p></div>
+      <span class="status"><i></i> Protótipo</span>
+    </header>
+
+    <nav class="tabs" aria-label="Navegação">
+      <button class="tab active" data-view="chat">Conversa</button>
+      <button class="tab" data-view="memory">Memória</button>
+      <button class="tab" data-view="settings">Configuração</button>
+    </nav>
+
+    <section id="chat" class="view active">
+      <div class="welcome">
+        <div class="big-avatar">🥜</div>
+        <h2>Fala! Eu sou o Paçoca.</h2>
+        <p>Estou no meu primeiro protótipo. Posso guardar suas anotações neste aparelho e conversar por voz. Para respostas inteligentes de verdade, ainda precisamos conectar um serviço de IA com segurança.</p>
+      </div>
+      <div id="messages" class="messages" aria-live="polite">
+        <article class="bubble bot"><b>Paçoca</b><p>Vamos construir isso juntos. O que você quer organizar hoje?</p></article>
+      </div>
+      <div class="composer">
+        <button id="micBtn" class="round" title="Falar" aria-label="Falar">🎙️</button>
+        <textarea id="messageInput" rows="1" placeholder="Converse com o Paçoca..."></textarea>
+        <button id="sendBtn" class="send">Enviar</button>
+      </div>
+      <p id="voiceStatus" class="hint">Toque no microfone para falar. A disponibilidade depende do navegador.</p>
+    </section>
+
+    <section id="memory" class="view">
+      <div class="section-head"><h2>Minha memória</h2><p>As anotações ficam salvas neste aparelho.</p></div>
+      <form id="memoryForm" class="panel">
+        <label for="memoryText">Guardar uma informação ou ideia</label>
+        <textarea id="memoryText" rows="3" placeholder="Ex.: Estou desenvolvendo a RB Lager 01..."></textarea>
+        <button class="primary" type="submit">Guardar na memória</button>
+      </form>
+      <div id="memoryList" class="memory-list"></div>
+    </section>
+
+    <section id="settings" class="view">
+      <div class="section-head"><h2>Configuração</h2><p>Conectaremos o cérebro de IA depois de preparar um servidor seguro.</p></div>
+      <div class="panel">
+        <h3>Identidade do Paçoca</h3>
+        <p>Amigo sincero, inteligente, jovem, brasileiro, descontraído e bem-humorado. Deve questionar ideias, pesquisar fontes confiáveis e nunca inventar resultados.</p>
+        <h3>Conexão de inteligência artificial</h3>
+        <p class="warning">Ainda não conectada. Não cole chaves secretas de API aqui. Elas precisam ficar protegidas no servidor, nunca no aplicativo.</p>
+        <label for="endpoint">Endereço do servidor do Paçoca (opcional)</label>
+        <input id="endpoint" type="url" placeholder="https://seu-servidor.example/chat">
+        <button id="saveEndpoint" class="primary">Salvar endereço</button>
+        <p class="hint">Sem servidor conectado, o aplicativo funciona como protótipo de interface, voz e memória local — não como IA autônoma.</p>
+      </div>
+      <div class="panel">
+        <h3>Privacidade</h3>
+        <p>As memórias e o histórico deste protótipo são armazenados no armazenamento local do navegador. Limpar os dados do navegador pode apagá-los. Não guarde senhas, documentos ou dados bancários aqui.</p>
+        <button id="exportBtn" class="secondary">Exportar minha memória</button>
+      </div>
+    </section>
+
+    <footer>Paçoca 1.0 · Protótipo inicial · Feito para Android</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
